@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lista zadań - tabela</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Lista zadań</h1>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Szukaj zadania..." />
+    </div>
+
+    <div class="table-wrap">
+      <table id="tasksTable" aria-label="Lista zadań">
+        <thead>
+          <tr>
+            <th class="col-name">Nazwa zadania</th>
+            <th class="col-date">Data</th>
+            <th class="col-action" colspan="2">Akcje</th>
+          </tr>
+        </thead>
+        <tbody id="taskList"></tbody>
+      </table>
+    </div>
+
+    <div class="add-task">
+      <input type="text" id="newTaskInput" placeholder="Nowe zadanie..." />
+      <input type="date" id="newTaskDate" />
+      <button id="addTaskBtn" title="Dodaj zadanie">+</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
