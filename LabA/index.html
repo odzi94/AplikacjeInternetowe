@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pogoń Szczecin - Portowcy</title>
-    <script src="https://wi.arturk.pl/zen-style.js.php?styles[]=style-1&styles[]=style-2" defer></script>
+
+    <!-- Dynamiczny styl ładowany przez TypeScript -->
+    <link id="dynamic-style" rel="stylesheet" href="">
+
+    <!-- Skrypt TypeScript -->
+    <script type="module" src="/src/script.ts" defer></script>
 </head>
 <body>
 <header>
     <nav>
         <ul>
             <li><a href="#historia">Historia</a></li>
-
             <li><a href="#stadion">Stadion</a></li>
-            
             <li><a href="#sukcesy">Sukcesy</a></li>
-            
             <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
@@ -23,6 +25,10 @@
 
 <main>
     <h1>Pogoń Szczecin - Duma Pomorza Zachodniego</h1>
+
+    <!-- TU TypeScript wstawi przycisk -->
+    <div id="style-switcher" style="margin:20px 0;"></div>
+
     <section id="historia">
         <h2>Historia Klubu</h2>
 
@@ -103,20 +109,6 @@
     <p>Adres: ul. Karola Kozioła 4, 70-605 Szczecin</p>
     <p>Email: biuro@pogonszczecin.pl | Telefon: +48 91 464 03 43</p>
 </footer>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.createElement("div");
-        menuToggle.classList.add("menu-toggle");
-        menuToggle.innerHTML = "<span></span><span></span><span></span>";
-        document.querySelector("nav").appendChild(menuToggle);
-    
-        const navUl = document.querySelector("nav ul");
-    
-        menuToggle.addEventListener("click", () => {
-            navUl.classList.toggle("active");
-            menuToggle.classList.toggle("open");
-        });
-    });
-    </script>
+
 </body>
 </html>

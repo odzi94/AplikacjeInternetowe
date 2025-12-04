@@ -1,0 +1,160 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL – tło neon + granat */
+body {
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top, #001A33 0%, #000814 70%);
+    color: #f6f6f6;
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+/* HEADER – neonowa poświata */
+header {
+    background: #000d1f;
+    padding: 1rem 0;
+    border-bottom: 4px solid #FFD700;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* MENU */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #FFD700;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #FFD700;
+    transform: scale(1.08);
+}
+
+/* MAIN TITLE */
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    background: linear-gradient(90deg, #FFD700, #800020, #003366);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+}
+
+/* SECTIONS – neon panels */
+section {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 10, 25, 0.75);
+    border: 2px solid rgba(255, 215, 0, 0.25);
+    border-radius: 22px;
+
+    backdrop-filter: blur(10px);
+
+    max-width: 1100px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7),
+                0 0 20px rgba(255, 215, 0, 0.15);
+
+    transition: 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.25),
+                0 0 25px rgba(0, 0, 0, 0.8);
+    transform: translateY(-4px);
+}
+
+/* HEADINGS */
+h2 {
+    color: #FFD700;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+    border-left: 8px solid #800020;
+    padding-left: 1rem;
+}
+
+h3 {
+    color: #78AFFF;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+    text-shadow: 0 0 10px rgba(120, 175, 255, 0.5);
+}
+
+/* TEXT */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #e8e8ff;
+}
+
+/* LISTS */
+ul {
+    margin: 1.2rem 0;
+    padding: 1.2rem 1.2rem;
+    border-radius: 12px;
+
+    background: rgba(0, 20, 45, 0.6);
+    border-left: 5px solid #FFD700;
+
+    box-shadow: inset 0 0 12px rgba(255, 215, 0, 0.15);
+}
+
+li {
+    margin: 0.6rem 0;
+    color: #f0f0f0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #000d1f;
+    border-top: 4px solid #800020;
+    margin-top: 3rem;
+    color: #FFD700;
+
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
